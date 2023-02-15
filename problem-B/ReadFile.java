@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class Main {
+public class ReadFile {
         public static String[] readFile(String fileName){
         File file = new File(fileName);
         ArrayList<String> arr = new ArrayList<>();
