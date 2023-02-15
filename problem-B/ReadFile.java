@@ -1,4 +1,4 @@
-public static String[] ReadFile(String fileName){
+public static String[] readFile(String fileName){
         File file = new File(fileName);
         ArrayList<String> arr = new ArrayList<>();
         int lineCounter = 0;
@@ -15,6 +15,5 @@ public static String[] ReadFile(String fileName){
         for(int i = 0; i < arr.size(); i++){
             lines[i] = arr.get(i);
         }
-
         return lines;
-    }
+}
