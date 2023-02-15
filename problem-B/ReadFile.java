@@ -1,5 +1,5 @@
 public static String[] ReadFile(String fileName){
-        File file = new File("OOP\\HW_3\\Problem_B\\" + fileName);
+        File file = new File(fileName);
         ArrayList<String> arr = new ArrayList<>();
         int lineCounter = 0;
         try(Scanner scan = new Scanner(file)){
