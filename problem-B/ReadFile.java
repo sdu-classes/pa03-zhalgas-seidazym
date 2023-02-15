@@ -1,4 +1,9 @@
-public static String[] readFile(String fileName){
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+
+public class Main {
+        public static String[] readFile(String fileName){
         File file = new File(fileName);
         ArrayList<String> arr = new ArrayList<>();
         int lineCounter = 0;
@@ -7,13 +12,15 @@ public static String[] readFile(String fileName){
                 arr.add(lineCounter, scan.nextLine());
                 lineCounter++;
             }
-        }catch(FileNotFoundException f){
-            f.printStackTrace();
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
         }
 
         String[] lines = new String[arr.size()];
         for(int i = 0; i < arr.size(); i++){
             lines[i] = arr.get(i);
         }
+
         return lines;
+    }
 }
