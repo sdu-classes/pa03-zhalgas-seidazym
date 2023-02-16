@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class SimpleIO {
+public class SimplyIO {
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         File file;
@@ -30,11 +30,13 @@ public class SimpleIO {
                 int countThe = 0;
                 String str = sc.nextLine();
                 String str2 = str.toLowerCase();
-                for(int i = 0; i < str2.length() - 2; i++){
-                    if(str2.charAt(i) == 't' && str2.charAt(i + 1) == 'h' && str2.charAt(i + 2) == 'e')countThe++;
+                Scanner scann = new Scanner(str2);
+                while(scann.hasNext()){
+                    if(scann.next().equals("the"))countThe++;
                 }
                 pr.print(str);
                 pr.println(" [ " + countThe + " ]");
+                scann.close();
             }
             
             pr.close();
