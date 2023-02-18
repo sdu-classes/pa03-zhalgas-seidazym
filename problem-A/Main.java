@@ -10,16 +10,35 @@ public class Main {
         Calculator c4 = new Calculator(81, 9);
         System.out.println("Divide " + c4.Divide());
 //--------------False-------------
-        Calculator c5 = new Calculator(5.98, 6.32);
-        System.out.println(c5.Add());
-        Calculator c6 = new Calculator(5, -6);
-        System.out.println(c6.Add());
-        Calculator c7 = new Calculator(-5, 6);
-        System.out.println(c7.Substract());
-        Calculator c8 = new Calculator(5, 0);
-        System.out.println(c8.Myltiply());
-        Calculator c9 = new Calculator(0, 6);
-        System.out.println(c9.Divide());
-        
+        try{
+            Calculator c5 = new Calculator(5.98, 6.32);
+            System.out.println(c5.Add());
+        }catch(NumberFormatException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            Calculator c6 = new Calculator(5, -6);
+            System.out.println(c6.Add());
+        }catch(ArithmeticException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            Calculator c7 = new Calculator(-5, 6);
+            System.out.println(c7.Substract());
+        }catch(ArithmeticException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            Calculator c8 = new Calculator(5, 0);
+            System.out.println(c8.Myltiply());
+        }catch(ArithmeticException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            Calculator c9 = new Calculator(0, 6);
+            System.out.println(c9.Divide());
+        }catch(ArithmeticException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
