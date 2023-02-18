@@ -25,11 +25,8 @@ public class ReadFile {
         Scanner scan = new Scanner(file);
         String[] lines = new String[1000];
         while(scan.hasNextLine()){
-            String str = scan.nextLine();
-            if(str != null){
-                lines[lineCounter] = str;
-                lineCounter++;
-            }
+            lines[lineCounter] = scan.nextLine();
+            lineCounter++;
         }
         scan.close();
         return lines;
