@@ -3,8 +3,8 @@ public class Calculator {
     private int num2;
 
 //-------------Constructor------------
-    public Calculator(double n1, double n2){
-        if((int)n1 != n1 || (int)n2 != n2) throw new NumberFormatException("Your number is not int");
+   public Calculator(Object n1, Object n2){
+        if(!(n1 instanceof Integer) || !(n2 instanceof Integer)) throw new NumberFormatException("Your number is not int");
         else{ 
             this.num1 = (int)n1;
             this.num2 = (int)n2;
